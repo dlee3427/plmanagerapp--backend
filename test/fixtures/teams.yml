@@ -1,0 +1,29 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  coach: MyString
+  location: MyString
+  primary_color: MyString
+  secondary_color: MyString
+  logo: MyString
+  team_budget: 1.5
+  wins: 1
+  draws: 1
+  losses: 1
+  player_id: 1
+  game_id: 1
+
+two:
+  name: MyString
+  coach: MyString
+  location: MyString
+  primary_color: MyString
+  secondary_color: MyString
+  logo: MyString
+  team_budget: 1.5
+  wins: 1
+  draws: 1
+  losses: 1
+  player_id: 1
+  game_id: 1
