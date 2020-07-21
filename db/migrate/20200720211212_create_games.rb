@@ -7,6 +7,7 @@ class CreateGames < ActiveRecord::Migration[6.0]
       t.datetime :start_time
       t.datetime :end_time
       t.integer :player_id 
+      t.integer :user_id
 
     end
   end

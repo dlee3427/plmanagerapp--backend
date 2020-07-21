@@ -2,7 +2,7 @@ class CreateTeams < ActiveRecord::Migration[6.0]
   def change
     create_table :teams do |t|
       t.string :name
-      t.string :coach
+      t.integer :coach_id
       t.string :coach_picture
       t.string :stadium
       t.string :stadium_picture
@@ -13,6 +13,7 @@ class CreateTeams < ActiveRecord::Migration[6.0]
       t.integer :wins
       t.integer :draws
       t.integer :losses
+      t.integer :goals 
 
     end
   end

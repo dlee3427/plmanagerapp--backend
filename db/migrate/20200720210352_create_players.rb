@@ -16,6 +16,7 @@ class CreatePlayers < ActiveRecord::Migration[6.0]
       t.integer :tackles
       t.boolean :coach_satisfied
       t.integer :team_id
+      t.integer :user_id
 
     end
   end

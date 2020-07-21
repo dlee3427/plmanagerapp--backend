@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_20_213536) do
+ActiveRecord::Schema.define(version: 2020_07_21_135609) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 2020_07_20_213536) do
 
   create_table "formations", force: :cascade do |t|
     t.string "name"
+    t.integer "user_id"
     t.integer "team_id"
   end
 
@@ -35,14 +36,14 @@ ActiveRecord::Schema.define(version: 2020_07_20_213536) do
     t.datetime "start_time"
     t.datetime "end_time"
     t.integer "player_id"
+    t.integer "user_id"
   end
 
   create_table "matches", force: :cascade do |t|
     t.string "name"
+    t.datetime "date"
     t.integer "team_id"
     t.integer "game_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "players", force: :cascade do |t|
@@ -61,11 +62,12 @@ ActiveRecord::Schema.define(version: 2020_07_20_213536) do
     t.integer "tackles"
     t.boolean "coach_satisfied"
     t.integer "team_id"
+    t.integer "user_id"
   end
 
   create_table "teams", force: :cascade do |t|
     t.string "name"
-    t.string "coach"
+    t.integer "coach_id"
     t.string "coach_picture"
     t.string "stadium"
     t.string "stadium_picture"
@@ -76,6 +78,14 @@ ActiveRecord::Schema.define(version: 2020_07_20_213536) do
     t.integer "wins"
     t.integer "draws"
     t.integer "losses"
+    t.integer "goals"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.integer "team_id"
+    t.string "password_digest"
   end
 
   create_table "workouts", force: :cascade do |t|
