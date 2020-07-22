@@ -7,8 +7,13 @@ class Api::V1::TeamsController < ApplicationController
     
     def create 
         team = Team.create(team_params)
-        team.user = user 
-        render json: team 
+        if team.valid? 
+            user = User.find(session[:user_id])
+            team.user = user 
+            render json: team 
+        else 
+            render json: { errors: team.errors.full_messages}
+        end 
     end 
 
     def show 
@@ -29,7 +34,7 @@ class Api::V1::TeamsController < ApplicationController
             :name,
             :coach, 
             :coach_picture, 
-            :stadium 
+            :stadium, 
             :stadium_picture, 
             :primary_color, 
             :secondary_color,
@@ -39,10 +44,6 @@ class Api::V1::TeamsController < ApplicationController
             :draws,
             :losses
         )
-    end 
-
-    def find_user
-        user = User.find(session[:user_id])
     end 
 
 

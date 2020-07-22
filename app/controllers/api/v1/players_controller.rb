@@ -7,7 +7,11 @@ class Api::V1::PlayersController < ApplicationController
     
     def create 
         player = Player.create(player_params)
-        render json: player 
+        if player.valid? 
+            render json: player
+        else 
+            render json: { errors: player.errors.full_messages}
+        end 
     end 
 
     def show 

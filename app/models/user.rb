@@ -3,5 +3,5 @@ class User < ApplicationRecord
     has_many :players
     belongs_to :team 
     has_secure_password 
-    validates :name, :email, :team
+    validates :name, presence: true 
 end

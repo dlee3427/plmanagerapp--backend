@@ -1,7 +1,14 @@
 class Api::V1::ExercisesController < ApplicationController
 
     def create 
+        exercise = Exercise.create(exercise_params)
+        render json: exercise 
+    end 
 
+    def update 
+        exercise = Exercise.find(params[:id])
+        exercise.update(exercise_params)
+        render json: exercise 
     end 
 
     private 
@@ -12,7 +19,9 @@ class Api::V1::ExercisesController < ApplicationController
             :type,
             :workout_id,
             :start_time,
-            :end_time
+            :end_time,
+            :reps,
+            :sets
         )
     end 
 

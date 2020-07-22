@@ -5,4 +5,6 @@ class Team < ApplicationRecord
     has_many :formations
     has_many :users
 
+    validates :name, presence: true 
+
 end

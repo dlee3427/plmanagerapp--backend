@@ -17,7 +17,9 @@ ActiveRecord::Schema.define(version: 2020_07_21_135609) do
 
   create_table "exercises", force: :cascade do |t|
     t.string "name"
-    t.string "type"
+    t.string "exercise_type"
+    t.string "sets"
+    t.string "reps"
     t.integer "workout_id"
     t.datetime "start_time"
     t.datetime "end_time"
@@ -67,7 +69,6 @@ ActiveRecord::Schema.define(version: 2020_07_21_135609) do
 
   create_table "teams", force: :cascade do |t|
     t.string "name"
-    t.integer "coach_id"
     t.string "coach_picture"
     t.string "stadium"
     t.string "stadium_picture"
@@ -84,8 +85,9 @@ ActiveRecord::Schema.define(version: 2020_07_21_135609) do
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"
+    t.string "user_picture"
     t.integer "team_id"
-    t.string "password_digest"
+    t.integer "password_digest"
   end
 
   create_table "workouts", force: :cascade do |t|

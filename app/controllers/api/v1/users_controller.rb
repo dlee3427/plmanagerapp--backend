@@ -2,7 +2,11 @@ class Api::V1::UsersController < ApplicationController
 
     def create 
         user = User.create(user_params)
-        render json: user
+        if user && user.valid? 
+            render json: user
+        else 
+            render json: { errors: user.errors.full_messages}
+        end 
     end 
 
     private 
@@ -13,7 +17,8 @@ class Api::V1::UsersController < ApplicationController
             :email, 
             :team_id,
             :password,
-            :password_confirmation
+            :password_confirmation,
+            :password_digest
         )
     end 
 
