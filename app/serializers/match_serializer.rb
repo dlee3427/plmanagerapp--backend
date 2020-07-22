@@ -1,3 +1,3 @@
 class MatchSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :team, :game
 end

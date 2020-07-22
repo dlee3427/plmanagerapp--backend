@@ -35,7 +35,7 @@ class Api::V1::PlayersController < ApplicationController
     def player_params
         params.require(:player).permit(
             :name, 
-            :player_picture
+            :player_picture,
             :position,
             :number,
             :salary, 
