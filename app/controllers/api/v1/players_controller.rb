@@ -7,11 +7,7 @@ class Api::V1::PlayersController < ApplicationController
     
     def create 
         player = Player.create(player_params)
-        if player.valid? 
-            render json: player
-        else 
-            render json: { errors: player.errors.full_messages}
-        end 
+        render json: player
     end 
 
     def show 
@@ -45,9 +41,11 @@ class Api::V1::PlayersController < ApplicationController
             :appearances,
             :goals,
             :assists,
-            :passes, 
+            :passes,
             :tackles,
-            :coach_satisfied
+            :coach_satisfied, 
+            :team_id,
+            :user_id
         )
     end 
 

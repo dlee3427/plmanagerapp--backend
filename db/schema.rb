@@ -21,8 +21,7 @@ ActiveRecord::Schema.define(version: 2020_07_22_133436) do
     t.string "sets"
     t.string "reps"
     t.integer "workout_id"
-    t.datetime "start_time"
-    t.datetime "end_time"
+    t.integer "duration"
   end
 
   create_table "formations", force: :cascade do |t|

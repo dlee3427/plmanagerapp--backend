@@ -7,4 +7,9 @@ class Player < ApplicationRecord
 
     validates :name, presence: true 
 
+
+    def salary_sum 
+        
+    end 
+
 end

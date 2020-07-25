@@ -43,3 +43,4 @@ gem 'active_model_serializers'
 gem 'jwt'
 gem 'activerecord-reset-pk-sequence'
 gem 'bcrypt'
+

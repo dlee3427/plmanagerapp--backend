@@ -13,7 +13,7 @@ class Api::V1::GamesController < ApplicationController
     private 
 
     def games_params 
-        params.require(:game).permit(
+        params.permit(
             :location, 
             :home_team_goals, 
             :away_team_goals, 
@@ -22,10 +22,6 @@ class Api::V1::GamesController < ApplicationController
             :player_id, 
             :user_id
         )
-    end 
-
-    def find_team 
-        
     end 
 
 end

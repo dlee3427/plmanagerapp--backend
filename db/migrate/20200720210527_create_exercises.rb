@@ -6,8 +6,7 @@ class CreateExercises < ActiveRecord::Migration[6.0]
       t.string :sets 
       t.string :reps
       t.integer :workout_id
-      t.datetime :start_time
-      t.datetime :end_time
+      t.integer :duration 
       
     end
   end

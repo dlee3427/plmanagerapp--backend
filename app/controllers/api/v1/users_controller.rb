@@ -7,7 +7,6 @@ class Api::V1::UsersController < ApplicationController
 
     def create 
         user = User.create(user_params)
-        byebug
         render json: user
     end 
 
@@ -24,7 +23,7 @@ class Api::V1::UsersController < ApplicationController
             :email, 
             :team_id,
             :user_picture,
-            :password
+            :password, 
         )
     end 
 
