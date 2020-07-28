@@ -59,14 +59,15 @@ ActiveRecord::Schema.define(version: 2020_07_22_133436) do
     t.integer "playing_time"
     t.string "nationality"
     t.integer "age"
-    t.integer "appearances"
-    t.integer "goals"
-    t.integer "assists"
-    t.integer "passes"
-    t.integer "tackles"
-    t.boolean "coach_satisfied"
+    t.integer "appearances", default: 0
+    t.integer "goals", default: 0
+    t.integer "assists", default: 0
+    t.integer "passes", default: 0
+    t.integer "tackles", default: 0
+    t.boolean "injured", default: false
     t.integer "team_id"
     t.integer "user_id"
+    t.string "country_picture"
   end
 
   create_table "teams", force: :cascade do |t|

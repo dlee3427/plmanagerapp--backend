@@ -7,6 +7,7 @@ class Api::V1::TeamsController < ApplicationController
     
     def create 
         team = Team.create(team_params)
+        team.players.build
         if team.valid? 
             user = User.find(session[:user_id])
             team.user = user 

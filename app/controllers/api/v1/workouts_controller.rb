@@ -6,8 +6,13 @@ class Api::V1::WorkoutsController < ApplicationController
     end 
 
     def create
-        workout = Workout.create(workout_params)
-        render json: workout 
+        workout = Workout.new(workout_params)
+        if workout.save 
+            debugger
+            render json: workout 
+        else 
+            render :json => [{ :error => "An error was encountered while processing your photos. Please try again." }], :status => 304
+        end
     end     
 
     def show 
@@ -28,7 +33,8 @@ class Api::V1::WorkoutsController < ApplicationController
             :name, 
             :player_id,
             :start_time, 
-            :end_time
+            :end_time,
+            :exercise_id
         )
 
     end 

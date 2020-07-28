@@ -21,12 +21,11 @@ class Api::V1::ExercisesController < ApplicationController
     def exercise_params 
         params.require(:exercise).permit(
             :name, 
-            :type,
+            :exercise_type,
             :workout_id,
-            :start_time,
-            :end_time,
             :reps,
-            :sets
+            :sets,
+            :duration
         )
     end 
 

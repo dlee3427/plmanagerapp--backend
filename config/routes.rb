@@ -10,6 +10,7 @@ Rails.application.routes.draw do
       resources :teams, only: [:index, :create, :show, :update]
       resources :formations, only: [:index, :show]
       resources :exercises, only: [:index, :new, :create, :update, :destroy]
+      resources :player_workouts
     end
   end
 

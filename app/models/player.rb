@@ -3,9 +3,9 @@ class Player < ApplicationRecord
     has_many :player_workouts
     has_many :workouts, :through => :player_workouts
     belongs_to :team 
-    belongs_to :user 
+    belongs_to :user  
 
-    validates :name, presence: true 
+    
 
 
     def salary_sum 

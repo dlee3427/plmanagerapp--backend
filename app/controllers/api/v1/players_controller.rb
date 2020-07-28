@@ -6,8 +6,14 @@ class Api::V1::PlayersController < ApplicationController
     end 
     
     def create 
-        player = Player.create(player_params)
-        render json: player
+
+        player = Player.new(player_params)
+        if player.save
+            byebug
+            render json: player
+        else 
+            render :json => [{ :error => "An error was encountered while processing your photos. Please try again." }], :status => 304
+        end
     end 
 
     def show 
@@ -22,8 +28,13 @@ class Api::V1::PlayersController < ApplicationController
     end 
 
     def destroy
-        player = Player.destroy[params[:id]]
-        render json: player 
+        player = Player.find(params[:id])
+        if player.destroy 
+            render json: player 
+        else 
+            render json: { message: "error: #{player.errors.full_messages}" }, status: 500
+        end
+        
     end 
 
     private 
@@ -37,15 +48,16 @@ class Api::V1::PlayersController < ApplicationController
             :salary, 
             :playing_time,
             :nationality,
-            :age, 
+            :age,
+            :injured, 
+            :team_id,
+            :user_id,
+            :country_picture,
             :appearances,
             :goals,
-            :assists,
-            :passes,
             :tackles,
-            :coach_satisfied, 
-            :team_id,
-            :user_id
+            :assists,
+            :passes
         )
     end 
 
