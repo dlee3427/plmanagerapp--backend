@@ -13,6 +13,14 @@ class CreateTeams < ActiveRecord::Migration[6.0]
       t.integer :draws
       t.integer :losses
       t.integer :goals 
+      t.integer :ticket_sales
+      t.integer :concession_sales 
+      t.integer :sponsorship_value
+      t.integer :travel_expenses
+      t.integer :merchandising_costs
+      t.integer :marketing_expenses
+      t.integer :employee_expenses
+      t.integer :taxes
 
     end
   end

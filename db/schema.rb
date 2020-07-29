@@ -83,6 +83,14 @@ ActiveRecord::Schema.define(version: 2020_07_22_133436) do
     t.integer "draws"
     t.integer "losses"
     t.integer "goals"
+    t.integer "ticket_sales"
+    t.integer "concession_sales"
+    t.integer "sponsorship_value"
+    t.integer "travel_expenses"
+    t.integer "merchandising_costs"
+    t.integer "marketing_expenses"
+    t.integer "employee_expenses"
+    t.integer "taxes"
   end
 
   create_table "users", force: :cascade do |t|

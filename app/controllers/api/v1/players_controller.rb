@@ -6,13 +6,11 @@ class Api::V1::PlayersController < ApplicationController
     end 
     
     def create 
-
         player = Player.new(player_params)
         if player.save
-            byebug
             render json: player
         else 
-            render :json => [{ :error => "An error was encountered while processing your photos. Please try again." }], :status => 304
+            render :json => {message: "#{player.errors.full_messages}"}
         end
     end 
 
