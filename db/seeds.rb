@@ -46,44 +46,58 @@ Team.create(name: "Norwich City", stadium: "", stadium_picture: "", primary_colo
 
 
 
-User.create(name: "Jose Mourinho", email: "mourinho@gmail.com", user_picture: "https://as01.epimg.net/en/imagenes/2019/08/10/football/1565432981_864376_1565433048_noticia_normal_recorte1.jpg", team: spurs, password: "password")  
+jose = User.create(name: "Jose Mourinho", email: "mourinho@gmail.com", user_picture: "https://as01.epimg.net/en/imagenes/2019/08/10/football/1565432981_864376_1565433048_noticia_normal_recorte1.jpg", team: spurs, password: "password") 
+
+frank = User.create(name: "Frank Lampard", email: "frank@lchelsea.com", user_picture: "https://cdn.images.express.co.uk/img/dynamic/67/590x/Frank-Lampard-1314923.jpg?r=1595851912679", team: chelsea, password: "frank") 
 
 
 # Spurs Seed 
-son = Player.create(name: "Son Heung Min", player_picture: "https://resources.premierleague.com/premierleague/photo/2020/02/13/cedfccb8-124b-4205-bbf2-b7a04522bfdd/Son-Heung-min.jpg", country_picture: "https://winafestival.com/wp-content/uploads/2018/03/korea-clipart-korean-flag-3.png", position: "Left Wing", number: 7, salary: 6000000.00, playing_time: 90, nationality: "Republic of Korea", age: 28, appearances: 35, goals: 11, assists: 10, passes: 120, tackles: 6, injured: true, team: spurs, user: User.first )
-harry = Player.create(name: "Harry Kane", country_picture: "https://upload.wikimedia.org/wikipedia/en/b/be/Flag_of_England.svg", player_picture: "https://en.as.com/en/imagenes/2020/04/12/football/1586678237_139234_noticia_normal.jpg", position: "Striker", number: 10, salary: 1000000.00, playing_time: 90, nationality: "England", age: 26, appearances: 30, goals: 16, assists: 3, passes: 50, tackles: 3, injured: true, team: spurs, user: User.first)
-pulisic = Player.create(name: "Christian Pulisic", country_picture: "https://cdn.britannica.com/79/4479-050-6EF87027/flag-Stars-and-Stripes-May-1-1795.jpg",player_picture:"https://i0.wp.com/metro.co.uk/wp-content/uploads/2020/07/PRI_156342616-e1593671747257.jpg?quality=90&strip=all&zoom=1&resize=644%2C412&ssl=1", position: "Left Wing", number: 7, salary: 3400000.00, playing_time: 90, nationality: "United States", age: 20, appearances: 35, goals: 10, assists: 4, passes: 100, tackles: 22, injured: false, team: chelsea, user: User.last)
-lloris = Player.create(name: "Hugo Lloris", country_picture: "https://cdn.pixabay.com/photo/2013/07/12/17/17/france-151928__340.png",player_picture: "https://www.spurs-web.com/wp-content/uploads/2020/02/hugo-lloris.jpg", position: "Goalkeeper", number: 7, salary: 12000000.00, playing_time: 90, nationality: "France", age: 28, appearances: 35, goals: 11, assists: 10, passes: 120, tackles: 6, injured: false, team: spurs, user: User.first)
-Player.create(name: "Giovani Lo Celso", country_picture: "https://cdn.countryflags.com/thumbs/argentina/flag-400.png", player_picture: "https://i2-prod.birminghammail.co.uk/incoming/article18176746.ece/ALTERNATES/s1200b/0_Burnley-FC-v-Tottenham-Hotspur-Premier-League.jpg", position: "Midfielder", number: 1, salary: 3500000.00, playing_time: 90, nationality: "Argentina", age: 24, appearances: 30, goals: 3, assists: 5, passes: 68, tackles: 3, injured: true, team: spurs, user: User.first )
-Player.create(name: "Lucas Moura", country_picture: "https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/720px-Flag_of_Brazil.svg.png", player_picture: "https://tmssl.akamaized.net/images/foto/normal/lucas-moura-von-tottenham-1557349598-22166.jpg", position: "Midfielder", number: 27, salary: 20000021.00, playing_time: 65, nationality: "Brazil", age: 27, appearances: 25, goals: 4, assists: 6, passes: 43, tackles: 12, injured: false, team: spurs, user: User.first)
-Player.create(name: "Serge Aurier", country_picture: "https://upload.wikimedia.org/wikipedia/commons/f/fe/Flag_of_C%C3%B4te_d%27Ivoire.svg", player_picture:"https://resources.premierleague.com/photos/2019/09/25/55906239-dd0e-403b-8450-fef918096196/Serge-Aurier.jpg?width=930&height=620", position: "Right Back", number: 24, salary: 3600000.00, playing_time: 90, nationality: "Ivory Coast", age: 27, appearances: 30, goals: 3, assists: 10, passes: 65, tackles: 20, injured: false, team: spurs, user: User.first)
-Player.create(name: "Dele Alli", country_picture: "https://upload.wikimedia.org/wikipedia/en/b/be/Flag_of_England.svg", player_picture:"https://resources.premierleague.com/premierleague/photo/2019/11/27/b2d99f03-bdf4-45bf-9112-a180dbd2a066/Dele-Alli.jpg", position: "Attacking Midfielder", number: 20, salary: 1520000.00, playing_time: 90, nationality: "England", age: 24, appearances: 35, goals: 7, assists: 10, passes: 100, tackles: 22, injured: false, team: spurs, user: User.first)
+son = Player.create(name: "Son Heung Min", player_picture: "https://resources.premierleague.com/premierleague/photo/2020/02/13/cedfccb8-124b-4205-bbf2-b7a04522bfdd/Son-Heung-min.jpg", country_picture: "https://winafestival.com/wp-content/uploads/2018/03/korea-clipart-korean-flag-3.png", position: "Left Wing", number: 7, salary: 6000000.00, playing_time: 90, nationality: "Republic of Korea", age: 28, appearances: 35, goals: 11, assists: 10, passes: 120, tackles: 6, injured: true, team: spurs, user: jose)
+harry = Player.create(name: "Harry Kane", country_picture: "https://upload.wikimedia.org/wikipedia/en/b/be/Flag_of_England.svg", player_picture: "https://en.as.com/en/imagenes/2020/04/12/football/1586678237_139234_noticia_normal.jpg", position: "Striker", number: 10, salary: 1000000.00, playing_time: 90, nationality: "England", age: 26, appearances: 30, goals: 16, assists: 3, passes: 50, tackles: 3, injured: true, team: spurs, user: jose)
+pulisic = Player.create(name: "Christian Pulisic", country_picture: "https://cdn.britannica.com/79/4479-050-6EF87027/flag-Stars-and-Stripes-May-1-1795.jpg",player_picture:"https://i0.wp.com/metro.co.uk/wp-content/uploads/2020/07/PRI_156342616-e1593671747257.jpg?quality=90&strip=all&zoom=1&resize=644%2C412&ssl=1", position: "Left Wing", number: 22, salary: 3400000.00, playing_time: 90, nationality: "United States", age: 20, appearances: 35, goals: 10, assists: 4, passes: 100, tackles: 22, injured: false, team: chelsea, user: frank)
+lloris = Player.create(name: "Hugo Lloris", country_picture: "https://cdn.pixabay.com/photo/2013/07/12/17/17/france-151928__340.png",player_picture: "https://www.spurs-web.com/wp-content/uploads/2020/02/hugo-lloris.jpg", position: "Goalkeeper", number: 7, salary: 12000000.00, playing_time: 90, nationality: "France", age: 28, appearances: 35, goals: 11, assists: 10, passes: 120, tackles: 6, injured: false, team: spurs, user: jose)
+Player.create(name: "Giovani Lo Celso", country_picture: "https://cdn.countryflags.com/thumbs/argentina/flag-400.png", player_picture: "https://i2-prod.birminghammail.co.uk/incoming/article18176746.ece/ALTERNATES/s1200b/0_Burnley-FC-v-Tottenham-Hotspur-Premier-League.jpg", position: "Midfielder", number: 1, salary: 3500000.00, playing_time: 90, nationality: "Argentina", age: 24, appearances: 30, goals: 3, assists: 5, passes: 68, tackles: 3, injured: true, team: spurs, user: jose)
+Player.create(name: "Lucas Moura", country_picture: "https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/720px-Flag_of_Brazil.svg.png", player_picture: "https://tmssl.akamaized.net/images/foto/normal/lucas-moura-von-tottenham-1557349598-22166.jpg", position: "Midfielder", number: 27, salary: 20000021.00, playing_time: 65, nationality: "Brazil", age: 27, appearances: 25, goals: 4, assists: 6, passes: 43, tackles: 12, injured: false, team: spurs, user: jose)
+Player.create(name: "Serge Aurier", country_picture: "https://upload.wikimedia.org/wikipedia/commons/f/fe/Flag_of_C%C3%B4te_d%27Ivoire.svg", player_picture:"https://resources.premierleague.com/photos/2019/09/25/55906239-dd0e-403b-8450-fef918096196/Serge-Aurier.jpg?width=930&height=620", position: "Right Back", number: 24, salary: 3600000.00, playing_time: 90, nationality: "Ivory Coast", age: 27, appearances: 30, goals: 3, assists: 10, passes: 65, tackles: 20, injured: false, team: spurs, user: jose)
+Player.create(name: "Dele Alli", country_picture: "https://upload.wikimedia.org/wikipedia/en/b/be/Flag_of_England.svg", player_picture:"https://resources.premierleague.com/premierleague/photo/2019/11/27/b2d99f03-bdf4-45bf-9112-a180dbd2a066/Dele-Alli.jpg", position: "Attacking Midfielder", number: 20, salary: 1520000.00, playing_time: 90, nationality: "England", age: 24, appearances: 35, goals: 7, assists: 10, passes: 100, tackles: 22, injured: false, team: spurs, user: jose)
 
 # Chelsea Seed 
 
-giroud = Player.create(name: "Olivier Giroud", country_picture: "https://cdn.pixabay.com/photo/2013/07/12/17/17/france-151928__340.png",player_picture:"https://www.getfootballnewsfrance.com/assets/fbl-euro-2020-qualifier-france-moldova-4-806x536.jpg", position: "Striker", number: 9, salary: 120000.00, playing_time: 90, nationality: "France", age: 29, appearances: 35, goals: 7, assists: 10, passes: 100, tackles: 22, injured: false, team: chelsea, user: User.last)
-Player.create(name: "Mason Mount",country_picture: "https://upload.wikimedia.org/wikipedia/en/b/be/Flag_of_England.svg", player_picture:"https://tmssl.akamaized.net/images/foto/normal/mason-mount-vom-fc-chelsea-1589550217-38669.jpg", position: "Midfielder", number: 5, salary: 810000.00, playing_time: 90, nationality: "England", age: 22, appearances: 35, goals: 5, assists: 12, passes: 70, tackles: 22, injured: false, team: chelsea, user: User.last)
-Player.create(name: "Antonio Rudiger",country_picture: "https://www.flagmakers.co.uk/wp-content/uploads/flags/country/Germany-National-Flag.jpg", player_picture:"https://resources.premierleague.com/photos/2019/03/26/f973640e-47a6-4a54-a864-9ebc2b6c13ea/Rudiger-Chelsea.jpg?width=932&height=620", position: "Center Back", number: 3, salary: 600000.00, playing_time: 90, nationality: "Germany", age: 26, appearances: 35, goals: 1, assists: 4, passes: 70, tackles: 55, injured: false, team: chelsea, user: User.last)
-kante = Player.create(name: "Ngolo Kante",country_picture: "https://cdn.pixabay.com/photo/2013/07/12/17/17/france-151928__340.png", player_picture:"https://img.bleacherreport.net/img/images/photos/003/809/951/hi-res-d46f06d287222dcb1cab83bdd7af6cc1_crop_north.jpg?h=533&w=800&q=70&crop_x=center&crop_y=top", position: "Midfielder", number: 7, salary: 538800.00, playing_time: 90, nationality: "France", age: 26, appearances: 377, goals: 8, assists: 14, passes: 70, tackles: 55, injured: false, team: chelsea, user: User.last)
-werner = Player.create(name: "Timo Werner",country_picture: "https://www.flagmakers.co.uk/wp-content/uploads/flags/country/Germany-National-Flag.jpg", player_picture:"https://e0.365dm.com/20/02/768x432/skysports-timo-werner-rb-leipzig_4919077.jpg?20200213153114", position: "Striker", number: 21, salary: 3008800.00, playing_time: 90, nationality: "Germany", age: 22, appearances: 0, goals: 0, assists: 0, passes: 0, tackles: 0, injured: false, team: chelsea, user: User.last)
-abraham = Player.create(name: "Tammy Abraham",country_picture: "https://upload.wikimedia.org/wikipedia/en/b/be/Flag_of_England.svg", player_picture:"https://miro.medium.com/proxy/1*4dIJI_u5Slpl6t21e6P2GQ.jpeg", position: "Forward", number: 7, salary: 3880000.00, playing_time: 90, nationality: "France", age: 22, appearances: 26, goals: 2, assists: 5, passes: 70, tackles: 15, injured: false, team: chelsea, user: User.last)
-Player.create(name: "Kepa Arrizabalaga",country_picture: "https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Flag_of_Spain.svg/750px-Flag_of_Spain.svg.png", player_picture:"https://i2-prod.football.london/incoming/article18525819.ece/ALTERNATES/s615/0_Kepa.jpg", position: "Goalkeeper", number: 1, salary: 400000.00, playing_time: 90, nationality: "Spain", age: 24, appearances: 32, goals: 0, assists: 0, passes: 0, tackles: 0, injured: false, team: chelsea, user: User.last)
-Player.create(name: "Reece James",country_picture: "https://upload.wikimedia.org/wikipedia/en/b/be/Flag_of_England.svg", player_picture:"https://tmssl.akamaized.net/images/foto/normal/reece-james-chelsea-fc-1573732619-27434.jpg", position: "Defender", number: 7, salary: 4152900, playing_time: 90, nationality: "England", age: 23, appearances: 31, goals: 2, assists: 5, passes: 94, tackles: 55, injured: false, team: chelsea, user: User.last)
+giroud = Player.create(name: "Olivier Giroud", country_picture: "https://cdn.pixabay.com/photo/2013/07/12/17/17/france-151928__340.png",player_picture:"https://www.getfootballnewsfrance.com/assets/fbl-euro-2020-qualifier-france-moldova-4-806x536.jpg", position: "Striker", number: 18, salary: 120000.00, playing_time: 90, nationality: "France", age: 29, appearances: 35, goals: 7, assists: 10, passes: 100, tackles: 22, injured: false, team: chelsea, user: frank)
+mount = Player.create(name: "Mason Mount",country_picture: "https://upload.wikimedia.org/wikipedia/en/b/be/Flag_of_England.svg", player_picture:"https://tmssl.akamaized.net/images/foto/normal/mason-mount-vom-fc-chelsea-1589550217-38669.jpg", position: "Midfielder", number: 19, salary: 810000.00, playing_time: 90, nationality: "England", age: 22, appearances: 35, goals: 5, assists: 12, passes: 70, tackles: 22, injured: false, team: chelsea, user: frank)
+rudiger = Player.create(name: "Antonio Rudiger",country_picture: "https://www.flagmakers.co.uk/wp-content/uploads/flags/country/Germany-National-Flag.jpg", player_picture:"https://resources.premierleague.com/photos/2019/03/26/f973640e-47a6-4a54-a864-9ebc2b6c13ea/Rudiger-Chelsea.jpg?width=932&height=620", position: "Center Back", number: 2, salary: 600000.00, playing_time: 90, nationality: "Germany", age: 26, appearances: 35, goals: 1, assists: 4, passes: 70, tackles: 55, injured: false, team: chelsea, user: frank)
+kante = Player.create(name: "Ngolo Kante",country_picture: "https://cdn.pixabay.com/photo/2013/07/12/17/17/france-151928__340.png", player_picture:"https://img.bleacherreport.net/img/images/photos/003/809/951/hi-res-d46f06d287222dcb1cab83bdd7af6cc1_crop_north.jpg?h=533&w=800&q=70&crop_x=center&crop_y=top", position: "Midfielder", number: 7, salary: 538800.00, playing_time: 90, nationality: "France", age: 26, appearances: 377, goals: 8, assists: 14, passes: 70, tackles: 55, injured: false, team: chelsea, user: frank)
+werner = Player.create(name: "Timo Werner",country_picture: "https://www.flagmakers.co.uk/wp-content/uploads/flags/country/Germany-National-Flag.jpg", player_picture:"https://e0.365dm.com/20/02/768x432/skysports-timo-werner-rb-leipzig_4919077.jpg?20200213153114", position: "Striker", number: 21, salary: 3008800.00, playing_time: 90, nationality: "Germany", age: 22, appearances: 0, goals: 0, assists: 0, passes: 0, tackles: 0, injured: false, team: chelsea, user: frank)
+abraham = Player.create(name: "Tammy Abraham",country_picture: "https://upload.wikimedia.org/wikipedia/en/b/be/Flag_of_England.svg", player_picture:"https://miro.medium.com/proxy/1*4dIJI_u5Slpl6t21e6P2GQ.jpeg", position: "Forward", number: 9, salary: 3880000.00, playing_time: 90, nationality: "France", age: 22, appearances: 26, goals: 2, assists: 5, passes: 70, tackles: 15, injured: false, team: chelsea, user: frank)
+kepa = Player.create(name: "Kepa Arrizabalaga",country_picture: "https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Flag_of_Spain.svg/750px-Flag_of_Spain.svg.png", player_picture:"https://i2-prod.football.london/incoming/article18525819.ece/ALTERNATES/s615/0_Kepa.jpg", position: "Goalkeeper", number: 1, salary: 400000.00, playing_time: 90, nationality: "Spain", age: 24, appearances: 32, goals: 0, assists: 0, passes: 0, tackles: 0, injured: false, team: chelsea, user: frank)
+reece = Player.create(name: "Reece James",country_picture: "https://upload.wikimedia.org/wikipedia/en/b/be/Flag_of_England.svg", player_picture:"https://tmssl.akamaized.net/images/foto/normal/reece-james-chelsea-fc-1573732619-27434.jpg", position: "Defender", number: 24, salary: 4152900, playing_time: 90, nationality: "England", age: 23, appearances: 31, goals: 2, assists: 5, passes: 94, tackles: 55, injured: false, team: chelsea, user: frank)
+
+willian = Player.create(name: "Willian",country_picture: "https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/1024px-Flag_of_Brazil.svg.png", player_picture:"https://i2.wp.com/metro.co.uk/wp-content/uploads/2020/05/GettyImages-1210290021-b14f.jpg?quality=90&strip=all&zoom=1&resize=644%2C433&ssl=1", position: "Forward", number: 10, salary: 4288000, playing_time: 90, nationality: "Brazil", age: 28, appearances: 31, goals: 5, assists: 5, passes: 94, tackles: 55, injured: false, team: chelsea, user: frank)
+
+kovacic = Player.create(name: "Mateo Kovacic",country_picture: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Flag_of_Croatia.svg/1200px-Flag_of_Croatia.svg.png", player_picture:"https://resources.premierleague.com/premierleague/photo/2019/11/07/c6d9f864-425b-42bd-979d-8721acbb660f/Kovacic.jpg", position: "Midfielder", number: 17, salary: 2500000, playing_time: 80, nationality: "Croatia", age: 26, appearances: 30, goals: 5, assists: 5, passes: 94, tackles: 55, injured: false, team: chelsea, user: frank)
+
+
 
 
 Workout.create(name: "Ab Workout", start_time: "9:00AM", end_time: "10:00AM")
 Workout.create(name: "Morning Lift", start_time: "10:00AM", end_time: "12:00PM")
 Workout.create(name: "Afternoon Lift", start_time: "5:00PM", end_time: "7:00PM")
 Workout.create(name: "Cardio", start_time: "7:00AM", end_time: "8:30AM")
-Workout.create(name: "Morning Run", start_time: "5:00AM", end_time: "7:00AM")
-Workout.create(name: "Afternoon Run", start_time: "12:00PM", end_time: "2:00PM")
-Workout.create(name: "Evening Run", start_time: "5:00PM", end_time: "7:00PM")
+morningRun = Workout.create(name: "Morning Run", start_time: "5:00AM", end_time: "7:00AM")
+afternoonRun = Workout.create(name: "Afternoon Run", start_time: "12:00PM", end_time: "2:00PM")
+eveningRun = Workout.create(name: "Evening Run", start_time: "5:00PM", end_time: "7:00PM")
 
 Exercise.create(name: "Ab Crunches", exercise_type: "Core", sets: "3", reps: "5-8", workout: Workout.first, duration: 65)
 Exercise.create(name: "Bicycle Kicks", exercise_type: "Core", sets: "3", reps: "10-12", workout: Workout.first, duration: 90)
 Exercise.create(name: "Ab Planks", exercise_type: "Core", sets: "3", reps: "3-5", workout: Workout.first, duration: 45)
 Exercise.create(name: "Deadlifts", exercise_type: "Full Body", sets: "3", reps: "8-12", workout: Workout.second, duration: 30)
-Exercise.create(name: "Squats", exercise_type: "Legs", sets:"5", reps: "10-12", workout: Workout.second, duration: 30)
+Exercise.create(name: "Sprint", exercise_type: "Legs", sets:"5", reps: "10-12", workout: morningRun, duration: 30)
+Exercise.create(name: "Jog", exercise_type: "Legs", sets:"5", reps: "10-12", workout: eveningRun, duration: 30)
+Exercise.create(name: "Recovery Walk", exercise_type: "Legs", sets:"5", reps: "10-12", workout: morningRun, duration: 30)
+Exercise.create(name: "100 X 4 Sprint", exercise_type: "Legs", sets:"5", reps: "10-12", workout: eveningRun, duration: 30)
+Exercise.create(name: "1 Mile run", exercise_type: "Legs", sets:"1", reps: "1", workout: afternoonRun, duration: 30)
+
+
 
 Game.create(location: "Stamford Bridge", home_team_goals: 4, away_team_goals: 2, start_time: "7:00PM", end_time: "9:00PM")
 Game.create(location: "Old Trafford", home_team_goals: 2, away_team_goals: 3, start_time: "6:00PM", end_time: "8:00PM" )
@@ -137,3 +151,26 @@ PlayerWorkout.create(player: abraham, workout: Workout.last)
 PlayerWorkout.create(player: abraham, workout: Workout.first)
 PlayerWorkout.create(player: abraham, workout: Workout.second)
 
+
+PlayerWorkout.create(player: mount, workout: Workout.fourth)
+PlayerWorkout.create(player: mount, workout: Workout.first)
+PlayerWorkout.create(player: mount, workout: Workout.second)
+PlayerWorkout.create(player: mount, workout: Workout.third)
+PlayerWorkout.create(player: kante, workout: Workout.second)
+PlayerWorkout.create(player: kante, workout: Workout.first)
+PlayerWorkout.create(player: reece, workout: Workout.last)
+PlayerWorkout.create(player: reece, workout: Workout.first)
+PlayerWorkout.create(player: reece, workout: Workout.second)
+
+PlayerWorkout.create(player: rudiger, workout: Workout.last)
+PlayerWorkout.create(player: rudiger, workout: Workout.first)
+PlayerWorkout.create(player: rudiger, workout: Workout.second)
+
+
+PlayerWorkout.create(player: willian, workout: Workout.last)
+PlayerWorkout.create(player: willian, workout: Workout.first)
+PlayerWorkout.create(player: willian, workout: Workout.second)
+
+PlayerWorkout.create(player: kovacic, workout: Workout.last)
+PlayerWorkout.create(player: kovacic, workout: Workout.first)
+PlayerWorkout.create(player: kovacic, workout: Workout.second)

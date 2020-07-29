@@ -26,6 +26,15 @@ class Api::V1::WorkoutsController < ApplicationController
         render json: workout 
     end 
 
+    def destroy
+        workout = Workout.find(params[:id])
+        if workout.destroy 
+            render json: workout
+        else 
+            render json: { message: "error: #{player.errors.full_messages}" }, status: 500
+        end
+    end 
+
     private 
 
     def workout_params 
