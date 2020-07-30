@@ -23,7 +23,7 @@ Exercise.reset_pk_sequence
 PlayerWorkout.reset_pk_sequence
 
 # Team Seed 
-liverpool = Team.create(name: "Liverpool FC ", stadium: "", stadium_picture: "", primary_color: "Red", secondary_color: "White", logo: "https://logodownload.org/wp-content/uploads/2017/02/Arsenal-logo-escudo-shield-1.png", team_budget: 3230002050.00, wins: 33, draws: 3, losses: 3, goals: 85, ticket_sales: 200000000, concession_sales: 4000000, sponsorship_value: 15000420, travel_expenses: 2002090, merchandising_costs: 40004320, marketing_expenses:12400000, employee_expenses: 8045000, taxes: 12000000)
+liverpool = Team.create(name: "Liverpool FC", stadium: "", stadium_picture: "", primary_color: "Red", secondary_color: "White", logo: "https://logodownload.org/wp-content/uploads/2017/02/Arsenal-logo-escudo-shield-1.png", team_budget: 3230002050.00, wins: 33, draws: 3, losses: 3, goals: 85, ticket_sales: 200000000, concession_sales: 4000000, sponsorship_value: 15000420, travel_expenses: 2002090, merchandising_costs: 40004320, marketing_expenses:12400000, employee_expenses: 8045000, taxes: 12000000)
 mancity = Team.create(name: "Manchester City Football Club", stadium: "Ethiad Stadium", stadium_picture: "", primary_color: "Sky Blue", secondary_color: "White", logo: "https://logodownload.org/wp-content/uploads/2017/02/Arsenal-logo-escudo-shield-1.png", team_budget: 3200204150.00, wins: 26, draws: 3, losses: 9, goals: 102, ticket_sales: 200000000, concession_sales: 4000000, sponsorship_value: 15000420, travel_expenses: 2002090, merchandising_costs: 40004320, marketing_expenses:12400000, employee_expenses: 8045000, taxes: 12000000 )
 manu = Team.create(name: "Manchester United", stadium: "Old Trafford", stadium_picture: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Manchester_United_Panorama_%288051523746%29.jpg/1200px-Manchester_United_Panorama_%288051523746%29.jpg", primary_color: "Red", secondary_color: "White", logo: "https://logos-world.net/wp-content/uploads/2020/06/Red-Devils-logo.png", team_budget: 5062122050.00, wins: 18, draws: 12, losses: 8, goals: 66)
 chelsea = Team.create(name: "Chelsea Football Club", stadium: "Stamford Bridge", stadium_picture: "https://media-cdn.tripadvisor.com/media/photo-m/1280/16/7a/67/83/photo0jpg.jpg", primary_color: "Blue", secondary_color: "White", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Chelsea_FC.svg/180px-Chelsea_FC.svg.png", team_budget: 555262050.00, wins: 20, draws: 6, losses: 12, goals: 69, ticket_sales: 20000000, concession_sales: 1200000, sponsorship_value: 22000000, travel_expenses: 520000, merchandising_costs: 1200000, marketing_expenses: 3120500, employee_expenses: 600000, taxes: 12000030)
@@ -46,9 +46,8 @@ Team.create(name: "Norwich City", stadium: "", stadium_picture: "", primary_colo
 
 
 
-jose = User.create(name: "Jose Mourinho", email: "mourinho@gmail.com", user_picture: "https://as01.epimg.net/en/imagenes/2019/08/10/football/1565432981_864376_1565433048_noticia_normal_recorte1.jpg", team: spurs, password: "password") 
-
-frank = User.create(name: "Frank Lampard", email: "frank@lchelsea.com", user_picture: "https://cdn.images.express.co.uk/img/dynamic/67/590x/Frank-Lampard-1314923.jpg?r=1595851912679", team: chelsea, password: "frank") 
+jose = User.create(name: "Jose Mourinho", nationality: "Portugal", salary: 4000000, country_picture: "https://www.worldatlas.com/r/w728/img/flag/pt-flag.jpg", email: "mourinho@gmail.com", user_picture: "https://as01.epimg.net/en/imagenes/2019/08/10/football/1565432981_864376_1565433048_noticia_normal_recorte1.jpg", team: spurs, password: "password") 
+frank = User.create(name: "Frank Lampard", nationality: "England", salary: 1200000, country_picture: "https://upload.wikimedia.org/wikipedia/en/b/be/Flag_of_England.svg", email: "frank@gmail.com", user_picture: "https://cdn.images.express.co.uk/img/dynamic/67/590x/Frank-Lampard-1314923.jpg?r=1595851912679", team: chelsea, password: "password") 
 
 
 # Spurs Seed 
