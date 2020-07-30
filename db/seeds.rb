@@ -13,6 +13,7 @@ Workout.destroy_all
 Exercise.destroy_all
 User.destroy_all
 PlayerWorkout.destroy_all
+Match.destroy_all
 
 Team.reset_pk_sequence
 User.reset_pk_sequence
@@ -21,16 +22,18 @@ Game.reset_pk_sequence
 Player.reset_pk_sequence
 Exercise.reset_pk_sequence
 PlayerWorkout.reset_pk_sequence
+Match.reset_pk_sequence
+
 
 # Team Seed 
 liverpool = Team.create(name: "Liverpool FC", stadium: "", stadium_picture: "", primary_color: "Red", secondary_color: "White", logo: "https://logodownload.org/wp-content/uploads/2017/02/Arsenal-logo-escudo-shield-1.png", team_budget: 3230002050.00, wins: 33, draws: 3, losses: 3, goals: 85, ticket_sales: 200000000, concession_sales: 4000000, sponsorship_value: 15000420, travel_expenses: 2002090, merchandising_costs: 40004320, marketing_expenses:12400000, employee_expenses: 8045000, taxes: 12000000)
 mancity = Team.create(name: "Manchester City Football Club", stadium: "Ethiad Stadium", stadium_picture: "", primary_color: "Sky Blue", secondary_color: "White", logo: "https://logodownload.org/wp-content/uploads/2017/02/Arsenal-logo-escudo-shield-1.png", team_budget: 3200204150.00, wins: 26, draws: 3, losses: 9, goals: 102, ticket_sales: 200000000, concession_sales: 4000000, sponsorship_value: 15000420, travel_expenses: 2002090, merchandising_costs: 40004320, marketing_expenses:12400000, employee_expenses: 8045000, taxes: 12000000 )
 manu = Team.create(name: "Manchester United", stadium: "Old Trafford", stadium_picture: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Manchester_United_Panorama_%288051523746%29.jpg/1200px-Manchester_United_Panorama_%288051523746%29.jpg", primary_color: "Red", secondary_color: "White", logo: "https://logos-world.net/wp-content/uploads/2020/06/Red-Devils-logo.png", team_budget: 5062122050.00, wins: 18, draws: 12, losses: 8, goals: 66)
 chelsea = Team.create(name: "Chelsea Football Club", stadium: "Stamford Bridge", stadium_picture: "https://media-cdn.tripadvisor.com/media/photo-m/1280/16/7a/67/83/photo0jpg.jpg", primary_color: "Blue", secondary_color: "White", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Chelsea_FC.svg/180px-Chelsea_FC.svg.png", team_budget: 555262050.00, wins: 20, draws: 6, losses: 12, goals: 69, ticket_sales: 20000000, concession_sales: 1200000, sponsorship_value: 22000000, travel_expenses: 520000, merchandising_costs: 1200000, marketing_expenses: 3120500, employee_expenses: 600000, taxes: 12000030)
-Team.create(name: "Leicester City", stadium: "", stadium_picture: "", primary_color: "Red", secondary_color: "White", logo: "https://logodownload.org/wp-content/uploads/2017/02/Arsenal-logo-escudo-shield-1.png", team_budget: 32002050.00, wins: 18, draws: 8, losses: 12, goals: 67, ticket_sales: 200000000, concession_sales: 4000000, sponsorship_value: 15000420, travel_expenses: 2002090, merchandising_costs: 40004320, marketing_expenses:12400000, employee_expenses: 8045000, taxes: 12000000)
+leicester = Team.create(name: "Leicester City", stadium: "", stadium_picture: "", primary_color: "Red", secondary_color: "White", logo: "https://logodownload.org/wp-content/uploads/2017/02/Arsenal-logo-escudo-shield-1.png", team_budget: 32002050.00, wins: 18, draws: 8, losses: 12, goals: 67, ticket_sales: 200000000, concession_sales: 4000000, sponsorship_value: 15000420, travel_expenses: 2002090, merchandising_costs: 40004320, marketing_expenses:12400000, employee_expenses: 8045000, taxes: 12000000)
 spurs = Team.create(name: "Tottenham Hotspurs", stadium: "Tottenham Hotspur Stadium", stadium_picture: "https://i.guim.co.uk/img/media/0c43389417f433da9cde5604c38fc4e6f8940de2/0_79_4500_2700/master/4500.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=4dcf3a135ebe664947e84289e93fa2c0", primary_color: "White", secondary_color: "Navy Blue", logo: "https://1000logos.net/wp-content/uploads/2018/06/tottenham-logo.jpg", team_budget: 15552505210.00, wins: 16, draws: 11, losses: 7, goals: 51, ticket_sales: 12400000, concession_sales: 3000000, sponsorship_value: 16000000, travel_expenses: 750000, merchandising_costs: 6000000 , marketing_expenses: 7210000, employee_expenses: 900000, taxes: 15040000 )
-Team.create(name: "Wolverhampton Wanderers", stadium: "", stadium_picture: "", primary_color: "Red", secondary_color: "White", logo: "https://logodownload.org/wp-content/uploads/2017/02/Arsenal-logo-escudo-shield-1.png", team_budget: 32002050.00, wins: 15, draws: 14, losses: 9, goals: 51, ticket_sales: 200000000, concession_sales: 4000000, sponsorship_value: 15000420, travel_expenses: 2002090, merchandising_costs: 40004320, marketing_expenses:12400000, employee_expenses: 8045000, taxes: 12000000)
-Team.create(name: "Arsenal Football Club", stadium: "", stadium_picture: "", primary_color: "Red", secondary_color: "White", logo: "https://logodownload.org/wp-content/uploads/2017/02/Arsenal-logo-escudo-shield-1.png", team_budget: 32002050.00, wins: 14, draws: 14, losses: 10, goals: 56, ticket_sales: 200000000, concession_sales: 4000000, sponsorship_value: 15000420, travel_expenses: 2002090, merchandising_costs: 40004320, marketing_expenses:12400000, employee_expenses: 8045000, taxes: 12000000)
+wolves = Team.create(name: "Wolverhampton Wanderers", stadium: "", stadium_picture: "", primary_color: "Red", secondary_color: "White", logo: "https://logodownload.org/wp-content/uploads/2017/02/Arsenal-logo-escudo-shield-1.png", team_budget: 32002050.00, wins: 15, draws: 14, losses: 9, goals: 51, ticket_sales: 200000000, concession_sales: 4000000, sponsorship_value: 15000420, travel_expenses: 2002090, merchandising_costs: 40004320, marketing_expenses:12400000, employee_expenses: 8045000, taxes: 12000000)
+arsenal = Team.create(name: "Arsenal Football Club", stadium: "", stadium_picture: "", primary_color: "Red", secondary_color: "White", logo: "https://logodownload.org/wp-content/uploads/2017/02/Arsenal-logo-escudo-shield-1.png", team_budget: 32002050.00, wins: 14, draws: 14, losses: 10, goals: 56, ticket_sales: 200000000, concession_sales: 4000000, sponsorship_value: 15000420, travel_expenses: 2002090, merchandising_costs: 40004320, marketing_expenses:12400000, employee_expenses: 8045000, taxes: 12000000)
 Team.create(name: "Sheffield United", stadium: "", stadium_picture: "", primary_color: "Red", secondary_color: "White", logo: "https://logodownload.org/wp-content/uploads/2017/02/Arsenal-logo-escudo-shield-1.png", wins: 14, draws: 12, losses: 12, goals: 39, team_budget: 555262050.00, ticket_sales: 20000000, concession_sales: 1200000, sponsorship_value: 22000000, travel_expenses: 520000, merchandising_costs: 1200000, marketing_expenses: 3120500, employee_expenses: 600000, taxes: 12000030)
 Team.create(name: "Burnley", stadium: "", stadium_picture: "", primary_color: "Red", secondary_color: "White", logo: "https://logodownload.org/wp-content/uploads/2017/02/Arsenal-logo-escudo-shield-1.png", team_budget: 32002050.00, wins: 15, draws: 9, losses: 14, goals: 67,ticket_sales: 20000000, concession_sales: 1200000, sponsorship_value: 22000000, travel_expenses: 520000, merchandising_costs: 1200000, marketing_expenses: 3120500, employee_expenses: 600000, taxes: 12000030)
 Team.create(name: "Southampton", stadium: "", stadium_picture: "", primary_color: "Red", secondary_color: "White", logo: "https://logodownload.org/wp-content/uploads/2017/02/Arsenal-logo-escudo-shield-1.png", team_budget: 32002050.00, wins: 15, draws: 7, losses: 16, goals: 51)
@@ -70,12 +73,8 @@ werner = Player.create(name: "Timo Werner",country_picture: "https://www.flagmak
 abraham = Player.create(name: "Tammy Abraham",country_picture: "https://upload.wikimedia.org/wikipedia/en/b/be/Flag_of_England.svg", player_picture:"https://miro.medium.com/proxy/1*4dIJI_u5Slpl6t21e6P2GQ.jpeg", position: "Forward", number: 9, salary: 3880000.00, playing_time: 90, nationality: "France", age: 22, appearances: 26, goals: 2, assists: 5, passes: 70, tackles: 15, injured: false, team: chelsea, user: frank)
 kepa = Player.create(name: "Kepa Arrizabalaga",country_picture: "https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Flag_of_Spain.svg/750px-Flag_of_Spain.svg.png", player_picture:"https://i2-prod.football.london/incoming/article18525819.ece/ALTERNATES/s615/0_Kepa.jpg", position: "Goalkeeper", number: 1, salary: 400000.00, playing_time: 90, nationality: "Spain", age: 24, appearances: 32, goals: 0, assists: 0, passes: 0, tackles: 0, injured: false, team: chelsea, user: frank)
 reece = Player.create(name: "Reece James",country_picture: "https://upload.wikimedia.org/wikipedia/en/b/be/Flag_of_England.svg", player_picture:"https://tmssl.akamaized.net/images/foto/normal/reece-james-chelsea-fc-1573732619-27434.jpg", position: "Defender", number: 24, salary: 4152900, playing_time: 90, nationality: "England", age: 23, appearances: 31, goals: 2, assists: 5, passes: 94, tackles: 55, injured: false, team: chelsea, user: frank)
-
 willian = Player.create(name: "Willian",country_picture: "https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/1024px-Flag_of_Brazil.svg.png", player_picture:"https://i2.wp.com/metro.co.uk/wp-content/uploads/2020/05/GettyImages-1210290021-b14f.jpg?quality=90&strip=all&zoom=1&resize=644%2C433&ssl=1", position: "Forward", number: 10, salary: 4288000, playing_time: 90, nationality: "Brazil", age: 28, appearances: 31, goals: 5, assists: 5, passes: 94, tackles: 55, injured: false, team: chelsea, user: frank)
-
 kovacic = Player.create(name: "Mateo Kovacic",country_picture: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Flag_of_Croatia.svg/1200px-Flag_of_Croatia.svg.png", player_picture:"https://resources.premierleague.com/premierleague/photo/2019/11/07/c6d9f864-425b-42bd-979d-8721acbb660f/Kovacic.jpg", position: "Midfielder", number: 17, salary: 2500000, playing_time: 80, nationality: "Croatia", age: 26, appearances: 30, goals: 5, assists: 5, passes: 94, tackles: 55, injured: false, team: chelsea, user: frank)
-
-
 
 
 Workout.create(name: "Ab Workout", start_time: "9:00AM", end_time: "10:00AM")
@@ -96,13 +95,14 @@ Exercise.create(name: "Recovery Walk", exercise_type: "Legs", sets:"5", reps: "1
 Exercise.create(name: "100 X 4 Sprint", exercise_type: "Legs", sets:"5", reps: "10-12", workout: eveningRun, duration: 30)
 Exercise.create(name: "1 Mile run", exercise_type: "Legs", sets:"1", reps: "1", workout: afternoonRun, duration: 30)
 
+Game.create(location: "Stamford Bridge", home_team_goals: 4, away_team_goals: 2, start_time: "7:00PM", end_time: "9:00PM", user: frank, player: pulisic)
+Game.create(location: "Old Trafford", home_team_goals: 2, away_team_goals: 3, start_time: "6:00PM", end_time: "8:00PM", user: jose, player: son)
+Game.create(location: "Stamford Bridge", home_team_goals: 3, away_team_goals: 1, start_time: "6:00PM", end_time: "8:00PM", user: frank, player: pulisic)
+Game.create(location: "Stamford Bridge", home_team_goals: 3, away_team_goals: 1, start_time: "6:00PM", end_time: "8:00PM", user: frank, player: pulisic)
+Game.create(location: "Tottenham Hotspur Stadium", home_team_goals: 2, away_team_goals: 4, start_time: "5:00PM", end_time: "7:00PM", user: jose, player: son ) 
+g6 = Game.create(location: "Stamford Bridge", home_team_goals: 2, away_team_goals: 1, start_time: "1:00PM", end_time: "3:00PM", user: frank, player: pulisic)
+g7 = Game.create(location: "Stamford Bridge", home_team_goals: 3, away_team_goals: 5, start_time: "5:00PM", end_time: "7:00PM", user: frank, player: pulisic)
 
-
-Game.create(location: "Stamford Bridge", home_team_goals: 4, away_team_goals: 2, start_time: "7:00PM", end_time: "9:00PM")
-Game.create(location: "Old Trafford", home_team_goals: 2, away_team_goals: 3, start_time: "6:00PM", end_time: "8:00PM" )
-Game.create(location: "Stamford Bridge", home_team_goals: 3, away_team_goals: 1, start_time: "6:00PM", end_time: "8:00PM")
-Game.create(location: "Stamford Bridge", home_team_goals: 3, away_team_goals: 1, start_time: "6:00PM", end_time: "8:00PM")
-Game.create(location: "Ethiad Stadium", home_team_goals: 2, away_team_goals: 4, start_time: "5:00PM", end_time: "7:00PM")
 
 # Creates first Match between two teams 
 Match.create(team: spurs, game: Game.first)
@@ -115,11 +115,19 @@ Match.create(team: spurs, game: Game.second)
 Match.create(team: chelsea, game: Game.third)
 Match.create(team: Team.second, game: Game.third)
 
-Match.create(team: Team.third, game: Game.fourth)
-Match.create(team: Team.second, game: Game.fourth)
+Match.create(team: chelsea, game: Game.fourth)
+Match.create(team: Team.last, game: Game.fourth)
 
 Match.create(team: Team.third, game: Game.fifth)
 Match.create(team: spurs, game: Game.fifth)
+
+Match.create(team: chelsea, game: g6)
+Match.create(team: arsenal, game: g6)
+
+Match.create(team: chelsea, game: g7)
+Match.create(team: wolves, game: g7)
+
+
 
 PlayerWorkout.create(player: Player.first, workout: Workout.first)
 PlayerWorkout.create(player: Player.last, workout: Workout.second)
